@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Secret Page</title>
   <style>
-    /* ---------- DARK THEME ---------- */
     body {
       height: 100vh;
       display: flex;
@@ -20,9 +19,8 @@
       background: rgba(255,255,255,0.05);
       padding: 30px;
       border-radius: 12px;
-      box-shadow: 0 4px 25px rgba(0,0,0,0.5);
+      box-shadow: 0 4px 25px rgba(0,0,0,0.3);
     }
-
     input {
       padding: 8px;
       border-radius: 8px;
@@ -30,10 +28,7 @@
       outline: none;
       margin-right: 10px;
       font-size: 14px;
-      background: #1a1f30;
-      color: #eaf6ff;
     }
-
     button {
       padding: 8px 14px;
       border-radius: 8px;
@@ -42,11 +37,9 @@
       background: #8dd3ff;
       font-weight: bold;
     }
-
     .error { color: #ffaaaa; margin-top: 10px; }
     .hidden { display: none; }
 
-    /* ---------- DOWNLOAD BUTTON ---------- */
     .download-btn {
       display: inline-block;
       background-color: #4CAF50;
@@ -55,51 +48,27 @@
       text-decoration: none;
       border-radius: 8px;
       font-weight: bold;
-      transition: all 0.3s ease;
+      transition: background-color 0.3s ease;
       margin-top: 10px;
-      box-shadow: 0 0 10px #4CAF50, 0 0 20px #4CAF50;
-      animation: glow-btn 1.5s infinite alternate;
     }
     .download-btn:hover {
       background-color: #45a049;
-      box-shadow: 0 0 15px #45a049, 0 0 30px #45a049;
-    }
-
-    @keyframes glow-btn {
-      from { box-shadow: 0 0 5px #4CAF50, 0 0 10px #4CAF50; }
-      to { box-shadow: 0 0 15px #4CAF50, 0 0 30px #4CAF50; }
-    }
-
-    /* ---------- GLOW HEADER ---------- */
-    .glow-text {
-      color: #8dd3ff;
-      text-shadow: 
-        0 0 5px #8dd3ff,
-        0 0 10px #8dd3ff,
-        0 0 20px #8dd3ff,
-        0 0 40px #0ff,
-        0 0 80px #0ff;
-      animation: glow 1.5s infinite alternate;
-    }
-
-    @keyframes glow {
-      from { text-shadow: 0 0 5px #8dd3ff, 0 0 10px #8dd3ff, 0 0 20px #8dd3ff; }
-      to { text-shadow: 0 0 10px #8dd3ff, 0 0 20px #8dd3ff, 0 0 40px #0ff; }
     }
   </style>
 </head>
 <body>
   <div class="box">
     <div id="password-area">
-      <h2 class="glow-text">Enter Password (Hint : it's your birthday)</h2>
+      <h2>Enter Password (Hint: it's your birthday)</h2>
       <input id="password" type="password" placeholder="password" />
       <button onclick="checkPassword()">Enter</button>
       <div id="error" class="error hidden">Wrong person.</div>
     </div>
 
     <div id="secret-content" class="hidden">
-      <h2 class="glow-text">Happy Birthday!</h2>
-      <p>Here’s your gift:</p>
+      <h2>Happy Birthday!</h2>
+      <p>Here's your gift.</p>
+      <!-- Make sure the file '....txt' is uploaded to the same repo -->
       <a href="....txt" download class="download-btn">⬇️ Download the file</a>
     </div>
   </div>
