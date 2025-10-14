@@ -39,6 +39,22 @@
     }
     .error { color: #ffaaaa; margin-top: 10px; }
     .hidden { display: none; }
+
+    /* ✅ Move the download button style up here */
+    .download-btn {
+      display: inline-block;
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+      margin-top: 10px;
+    }
+    .download-btn:hover {
+      background-color: #45a049;
+    }
   </style>
 </head>
 <body>
@@ -49,29 +65,12 @@
       <button onclick="checkPassword()">Enter</button>
       <div id="error" class="error hidden">Wrong person.</div>
     </div>
+
     <div id="secret-content" class="hidden">
-  <h2>good.</h2>
-  <p>still not done yet.</p>
-
-  <a href="....txt" download class="download-btn">⬇️ Download the file</a>
-</div>
-
-<style>
-  .download-btn {
-    display: inline-block;
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 8px;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-  }
-
-  .download-btn:hover {
-    background-color: #45a049;
-  }
-</style>
+      <h2>good.</h2>
+      <p>still not done yet.</p>
+      <a href="....txt" download class="download-btn">⬇️ Download the file</a>
+    </div>
   </div>
 
   <script>
